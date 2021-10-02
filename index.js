@@ -39,6 +39,18 @@ app.post("/recebecad", (req, res) => {
       categoria: "Cobra de Pedra",
       habilidade: "Cabeçada de Pedra",
     },
+    {
+      numero: 2,
+      nome: "Onyx",
+      tipo: "Pedra/Terrestre",
+      imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/095.png",
+      descricao:
+        "À medida que cava no solo, ele absorve muitos objetos duros. É isso que torna seu corpo tão sólido.",
+      altura: 8.8,
+      peso: 210,
+      categoria: "Cobra de Pedra",
+      habilidade: "Cabeçada de Pedra",
+    },
   ];
   res.render("retorna", { pokedex: pokedex });
 });

@@ -8,15 +8,16 @@
     <title>Pokedex</title>
 </head>
 <body>
-    <h1><%= pokedex[0].numero %></h1>
-    <h1><%= pokedex[0].nome %></h1>
-    <h1><%= pokedex[0].tipo %></h1>
+    <% pokedex.foreach(elemento =>{ %>
+    <h1><%= pokedex[elemento].numero %></h1>
+    <h1><%= pokedex[elemento].nome %></h1>
+    <h1><%= pokedex[elemento].tipo %></h1>
     <img src=<%= pokedex[0].imagem %>
-    <h1><%= pokedex[0].descricao %></h1>
-    <h1><%= pokedex[0].altura %></h1>
-    <h1><%= pokedex[0].peso %></h1>
-    <h1><%= pokedex[0].categoria %></h1>
-    <h1><%= pokedex[0].habilidade %></h1>
-
+    <h1><%= pokedex[elemento].descricao %></h1>
+    <h1><%= pokedex[elemento].altura %></h1>
+    <h1><%= pokedex[elemento].peso %></h1>
+    <h1><%= pokedex[elemento].categoria %></h1>
+    <h1><%= pokedex[elemento].habilidade %></h1>
+    <% } %>
 </body>
 </html>

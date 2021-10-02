@@ -9,5 +9,17 @@
 </head>
 <body>
     <h1>Criando uma Pokedex!</h1>
+
+    <% pokedex.forEach(elemento =>{ %>
+        <h1><%= elemento.numero %></h1>
+        <h1><%= elemento.nome %></h1>
+        <h1><%= elemento.tipo %></h1>
+        <img src=<%= elemento.imagem %>
+        <h1><%= elemento.descricao %></h1>
+        <h1><%= elemento.altura %></h1>
+        <h1><%= elemento.peso %></h1>
+        <h1><%= elemento.categoria %></h1>
+        <h1><%= elemento.habilidade %></h1>
+    <% }) %>
 </body>
 </html>

@@ -1,2 +1,3 @@
 # Pokedex
-Projeto2 - Mod2 - Blue Edetech
+https://pokedex-allrodk.herokuapp.com/
+

@@ -4,22 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Pokedex</title>
 </head>
-<body>
-    <h1>Criando uma Pokedex!</h1>
+<body>  
+    <header>
+        <h1><a href="/">Pokedex</a></h1>
+    </header>
 
-    <% pokedex.forEach(elemento =>{ %>
-        <h1><%= elemento.numero %></h1>
-        <h1><%= elemento.nome %></h1>
-        <h1><%= elemento.tipo %></h1>
-        <img src=<%= elemento.imagem %>
-        <h1><%= elemento.descricao %></h1>
-        <h1><%= elemento.altura %></h1>
-        <h1><%= elemento.peso %></h1>
-        <h1><%= elemento.categoria %></h1>
-        <h1><%= elemento.habilidade %></h1>
-    <% }) %>
+    <nav>
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/cadastro">Cadastro</a></li>
+        </ul>
+    </nav>
+
+    <% if(message != ""){ %>
+        <section id="message">
+            <p><%= message %></p><span id="close">&times;</span>
+        </section>
+    <% } %>
+
+    <section class="corpo" id="poke">
+        <% pokedex.forEach((elemento, indice) =>{ %>
+            <a class="pokemons" href="/detalhes/<%= indice %>">               
+                <h1><%= elemento.nome %></h1>               
+                <img src="<%= elemento.imagem %>" alt="">   
+                <h1><%= elemento.tipo %></h1>
+            </a>
+        <% }) %>
+    </section>
+    <script src="/js/script.js"></script>
 </body>
+<footer>
+    <h6>Todos os direitos Pokemonizados</h6>  
+</footer>
 </html>

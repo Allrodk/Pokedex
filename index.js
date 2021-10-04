@@ -59,7 +59,7 @@ app.post("/novo", (req, res) => {
   message = "Pokemon cadastrado!";
   setTimeout(() => {
     message = "";
-  }, 3000);
+  }, 5000);
 
   const pokemon = req.body;
   pokedex.push(pokemon);

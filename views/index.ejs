@@ -7,33 +7,36 @@
     <link rel="stylesheet" href="/css/estilo.css" />
     <title>Pokedex</title>
 </head>
-<body>  
+<body>          
     <header>
         <h1><a href="/">Pokedex</a></h1>
     </header>
+    
+    <main>
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/cadastro">Cadastro</a></li>
+            </ul>
+        </nav>
 
-    <nav>
-        <ul>
-            <li><a href="/">Início</a></li>
-            <li><a href="/cadastro">Cadastro</a></li>
-        </ul>
-    </nav>
+        <% if(message != ""){ %>
+            <section id="message">
+                <p><%= message %></p><span id="close">&times;</span>
+            </section>
+        <% } %>
 
-    <% if(message != ""){ %>
-        <section id="message">
-            <p><%= message %></p><span id="close">&times;</span>
+        <section class="corpo" id="poke">
+            <% pokedex.forEach((elemento, indice) =>{ %>
+                <a class="pokemons" href="/detalhes/<%= indice %>">               
+                    <h1><%= elemento.nome %></h1>               
+                    <img id="imgIndex" src="<%= elemento.imagem %>" alt="">   
+                    <h1><%= elemento.tipo %></h1>
+                </a>
+            <% }) %>
         </section>
-    <% } %>
-
-    <section class="corpo" id="poke">
-        <% pokedex.forEach((elemento, indice) =>{ %>
-            <a class="pokemons" href="/detalhes/<%= indice %>">               
-                <h1><%= elemento.nome %></h1>               
-                <img src="<%= elemento.imagem %>" alt="">   
-                <h1><%= elemento.tipo %></h1>
-            </a>
-        <% }) %>
-    </section>
+    </main>
+    
     <script src="/js/script.js"></script>
 </body>
 <footer>

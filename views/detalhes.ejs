@@ -13,52 +13,54 @@
         <h1><a href="/">Pokedex - Detalhes</a></h1>
     </header>
     
-    <nav>
-        <ul>
-            <li><a href="/">Início</a></li>
-            <li><a href="/cadastro">Cadastro</a></li>
-        </ul>
-    </nav>
-    
-    <section id="detalhes" class="corpo">        
-        <div>
-            <img src=<%= pokemon.imagem %>>
-        </div>
-        <div id="lista"> 
-            <span class="listadel">
-                <h4>Número:</h4>          
-                <p><%= pokemon.numero %></p>
-            </span>
-            <span class="listadel">
-                <h4>Nome:</h4>          
-                <p><%= pokemon.nome %></p>
-            </span> 
-            <span class="listadel">
-                <h4>Tipo:</h4>          
-                <p><%= pokemon.tipo %></p>
-            </span> 
-            <span class="listadel">
-                <h4>Descrição:</h4>          
-                <p><%= pokemon.descricao %></p>
-            </span> 
-            <span class="listadel">
-                <h4>Altura:</h4>          
-                <p><%= pokemon.altura %>m</p>
-            </span>        
-            <span class="listadel">
-                <h4>Peso:</h4>          
-                <p><%= pokemon.peso %>Kg</p>
-            </span> 
-            <span class="listadel">
-                <h4>Categoria:</h4>          
-                <p><%= pokemon.categoria %></p>
-            </span> 
-            <span class="listadel">
-                <h4>Habilidade:</h4>          
-                <p><%= pokemon.habilidade %></p>
-            </span>      
-        </div>
-    </section>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/cadastro">Cadastro</a></li>
+            </ul>
+        </nav>
+        
+        <section id="detalhes" class="corpo">        
+            <div>
+                <img id="imgDetalhes" src="<%= pokemon.imagem %>" alt="">
+            </div>
+            <div id="lista"> 
+                <span class="listadel">
+                    <h4>Número:</h4>          
+                    <p><%= pokemon.numero %></p>
+                </span>
+                <span class="listadel">
+                    <h4>Nome:</h4>          
+                    <p><%= pokemon.nome %></p>
+                </span> 
+                <span class="listadel">
+                    <h4>Tipo:</h4>          
+                    <p><%= pokemon.tipo %></p>
+                </span> 
+                <span class="listadel">
+                    <h4>Descrição:</h4>          
+                    <p><%= pokemon.descricao %></p>
+                </span> 
+                <span class="listadel">
+                    <h4>Altura:</h4>          
+                    <p><%= pokemon.altura %>m</p>
+                </span>        
+                <span class="listadel">
+                    <h4>Peso:</h4>          
+                    <p><%= pokemon.peso %>Kg</p>
+                </span> 
+                <span class="listadel">
+                    <h4>Categoria:</h4>          
+                    <p><%= pokemon.categoria %></p>
+                </span> 
+                <span class="listadel">
+                    <h4>Habilidade:</h4>          
+                    <p><%= pokemon.habilidade %></p>
+                </span>      
+            </div>
+        </section>
+    </main>
 </body>
 <footer>
     <h6>Todos os direitos Pokemonizados</h6>  
